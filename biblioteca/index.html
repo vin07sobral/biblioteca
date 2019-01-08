@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<?php require_once 'config.php';?>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <meta name="description" content="Projeto Mini Estoque - Fatec Itu">
+    <meta name="author" content="Prof. Ms. Ricardo Leme">
+    <!-- icone que aparecerá na aba do navegador-->
+    <link rel="icon" type="image/ico" href="estoque.ico"/>
+    <title>Biblioteca</title>
+    <!-- Bootstrap CSS -->
+    <link href="Content/bootstrap/css/bootstrap.min.css" rel="stylesheet">   
+    <!-- CSS para o login -->
+    <link href="css/login.css" rel="stylesheet">   
+  </head>
+  <body>
+      <!-- Utilize a ferramenta online http://www.layoutit.com/pt para
+      criar o seu layout -->
+    <div class="container-fluid">
+      <!-- barra de navegacao -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
+              <span class="sr-only">Menu</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Fatec Biblioteca</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Início</a></li>              
+              <li><a href="mailto:contato@estoquefatec.com.br"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Contato</a></li>              
+            </ul>
+              <!-- O data-toggle permite que o formulario aberto seja um modal -->
+            <ul class="nav navbar-nav navbar-right">              
+              <li><a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Área reservada</a></li>              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- conteudo inicial -->
+      <div class="jumbotron">
+          <h1>Projeto Biblioteca <small>Fatec Itu</small></h1>
+          <p class="text-info"><em>Site</em> desenvolvido com HTML5, CSS3, Bootstrap, MySQL e PHP.</p>
+        <p>          
+          <a class="btn btn-lg btn-info" href="#" data-toggle="modal" data-target="#login-modal">Acessar a área reservada</a>
+        </p>
+        <blockquote>
+     <p>O esforço para unir a sabedoria e o poder raramente dá certo e somente por tempo muito curto.</p>
+     <small>por <cite>Albert Einstein</cite></small>
+</blockquote>
+      </div>
+      <!-- modal login -->
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container">
+					<h1><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Área reservada</h1><br>
+				  <form name="form_login" method="post" action="login.php">
+					<input type="text" name="cpf" placeholder="999.999.999-99" required>
+					<input type="password" name="senha" placeholder="Senha" required>
+					<input type="submit" name="botao-login" class="login loginmodal-submit" value="Login">
+				  </form>
+					
+				  <div class="login-help">
+					<a href="adiciona-pessoa.php">Novo Usuário</a> - <a href="#">Esqueceu a senha?</a>
+				  </div>
+				</div>
+			</div>
+		  </div>
+
+    </div> 
+
+      <footer class="footer" style = "position:fixed;left:0px;bottom:0px;height:50px;width:100%;background:#5bc0de;">
+    <div class="container-fluid" >
+         <div class="col-md-12">
+        <h3>Fatec Itu 2017 &copy; - Todos os direitos reservados </h3>
+         </div>
+    </div>
+</footer>
+
+    <!-- Bootstrap JavaScript
+    ================================================== -->
+    <!-- Inserido no fim do arquivo para deixar o carregamento mais rapido -->
+    <script src="Content/jquery/jquery-1.12.4.min.js"></script>
+    <script src="Content/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
